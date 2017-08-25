@@ -48,5 +48,6 @@
 
 	<modules>
 		<module>javase-multithreading</module>
+		<module>javase-interviewcase</module>
 	</modules>
 </project>
