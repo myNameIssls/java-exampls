@@ -1,4 +1,4 @@
-package cn.tyrone.javase.multithreading;
+package cn.tyrone.javase.multithreading.helloword;
 
 /**
  * 通过实现Runnable创建多线程

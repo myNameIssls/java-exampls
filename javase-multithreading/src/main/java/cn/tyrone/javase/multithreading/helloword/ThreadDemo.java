@@ -1,4 +1,4 @@
-package cn.tyrone.javase.multithreading;
+package cn.tyrone.javase.multithreading.helloword;
 
 /**
  * 这个类是通过继承Thread来实现多继承的

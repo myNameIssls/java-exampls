@@ -1,5 +1,10 @@
-package cn.tyrone.javase.multithreading;
+package cn.tyrone.javase.multithreading.synchronizeddemo;
 
+/**
+ * 需求说明：
+ * 实现多线程安全案例
+ *
+ */
 public class SynchronizedDemo {
 	
 	public static void main(String[] args) {
