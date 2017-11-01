@@ -1,7 +1,7 @@
 package cn.tyrone.javase.multithreading.synchronizeddemo;
 
 public class Account {
-
+	
 	private int balance = 10000; // 账户余额
 	
 	public int getBalance() {
