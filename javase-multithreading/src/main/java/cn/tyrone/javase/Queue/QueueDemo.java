@@ -10,7 +10,7 @@ public class QueueDemo {
 	 * 用于输出队列
 	 * @param queue
 	 */
-	private static void printQ(Queue queue) {
+	public static void printQ(Queue queue) {
 		while (queue.peek() != null) {
 			System.out.print(queue.remove() + " ");
 		}

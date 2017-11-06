@@ -15,3 +15,6 @@
 /bin
 src/main/webapp/WEB-INF/classes/
 src/main/webapp/WEB-INF/work/
+*.idea
+*.iml
+
