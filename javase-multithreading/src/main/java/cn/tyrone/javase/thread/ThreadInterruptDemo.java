@@ -14,6 +14,8 @@ public class ThreadInterruptDemo implements Runnable {
          * true：表示当前线程为中断状态
          * false：表示当前线程为运行状态
          * 可以通过这样的方法来中断线程运行
+         * 如果这句代码之前使用过Thread.interrpted()方法，则不会中断线程。
+         * 因为调用Thread.interrpted()这个方法后，已经把当前线程状态给清除了。
          */
         if (Thread.currentThread().isInterrupted()){
             System.out.println("由于线程状态是中断，所以return不再执行线程任务");
