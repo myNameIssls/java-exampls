@@ -19,7 +19,7 @@ public class Consumer implements Runnable {
 	public void run() {
 		while (true) {
 			try {
-				System.out.println("正在消费数据: " + blockintQueue.take());
+				System.out.println("消费者消费数据: " + blockintQueue.take());
 				Thread.sleep(2000);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
