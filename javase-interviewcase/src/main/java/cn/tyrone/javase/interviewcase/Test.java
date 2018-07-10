@@ -1,26 +1,31 @@
 package cn.tyrone.javase.interviewcase;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+import javax.print.DocFlavor.STRING;
+
 public class Test {
 	public static void main(String[] args) {
-		int a = 0;
-		int b = 0;
-		Integer i = new Integer(0);
+		String a = new String("a");
+		String b = new String("a");
 		
-		System.out.println(a==b);
-		System.out.println(i.equals(a));
+		System.out.println("a.hashCode():"+a.hashCode());
+		System.out.println("b.hashCode():"+b.hashCode());
 		
-//		String c = "c"; 
-//		String d = "c";
-//		
-//		System.out.println(c == d);
-//		System.out.println(c.equals(d));
-//		
-//		String e = new String("c");
-//		String f = new String("c");
-//		System.out.println(c == e);
-//		System.out.println(c.equals(e));
-//		System.out.println(e == f);
-//		System.out.println(e.equals(f));
+		
+		List<String> list = new ArrayList<String>();
+		list.add(a);
+		list.add(b);
+		
+		System.out.println(list.size());
+		
+		Set<String> set = new HashSet<String>();
+		set.add(a);
+		set.add(b);
+		System.out.println(set.size());
 		
 		
 	}

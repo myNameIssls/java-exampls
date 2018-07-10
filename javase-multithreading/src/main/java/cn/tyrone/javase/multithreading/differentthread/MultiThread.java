@@ -1,5 +1,8 @@
 package cn.tyrone.javase.multithreading.differentthread;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * 需求描述：
  * 类级别线程锁：即当不同的类对象在不同的线程下访问同一个方法，
@@ -9,8 +12,8 @@ package cn.tyrone.javase.multithreading.differentthread;
 public class MultiThread {
 	private static int num = 0;
 
-	public static synchronized void print(String tag) {
-		
+	public static synchronized void print(String tag) { 
+		Map<String, Object> map = new HashMap<String, Object>();
 		if (tag.equals("a")) {
 			System.out.println("tag a, set num over!");
 			try {
