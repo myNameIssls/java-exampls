@@ -60,5 +60,6 @@
 		<module>javase-interviewcase</module>
 		<module>javase-socket</module>
 		<module>java-design-pattern</module>
+		<module>java-example</module>
 	</modules>
 </project>
