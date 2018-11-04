@@ -11,7 +11,8 @@ import java.util.List;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
-import org.junit.Test;
+//import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * jdk 8 新特性：Lambda 表达式示例程序
