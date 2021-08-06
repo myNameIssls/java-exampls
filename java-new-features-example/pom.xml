@@ -3,11 +3,11 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>cn.tyrone.javase</groupId>
-		<artifactId>javase-study</artifactId>
+		<groupId>cn.tyrone.java.example</groupId>
+		<artifactId>java-examples</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>java-example</artifactId>
+	<artifactId>java-new-features-example</artifactId>
 
 	<dependencies>
 		<dependency>
