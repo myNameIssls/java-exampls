@@ -56,10 +56,11 @@
 
 
 	<modules>
-		<module>javase-multithreading</module>
-		<module>javase-interviewcase</module>
+		<module>multithreading-examples</module>
+		<module>interview-case</module>
 		<module>javase-socket</module>
 		<module>design-pattern-examples</module>
 		<module>java-new-features-example</module>
-	</modules>
+        <module>data-structure-examples</module>
+    </modules>
 </project>

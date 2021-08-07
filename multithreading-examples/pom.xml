@@ -9,10 +9,8 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <groupId>cn.tyrone.javase</groupId>
-    <artifactId>javase-multithreading</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>javase-multithreading</name>
+    <artifactId>multithreading-examples</artifactId>
+    <name>multithreading-examples</name>
     <url>http://maven.apache.org</url>
 
     <properties>

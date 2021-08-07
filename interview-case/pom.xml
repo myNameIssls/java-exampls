@@ -10,8 +10,8 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>javase-interviewcase</artifactId>
-	<name>javase-interviewcase</name>
+	<artifactId>interview-case</artifactId>
+	<name>interview-case</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
