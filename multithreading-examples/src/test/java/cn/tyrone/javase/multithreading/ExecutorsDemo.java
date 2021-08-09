@@ -1,6 +1,7 @@
 package cn.tyrone.javase.multithreading;
 
-import org.junit.Test;
+
+import org.junit.jupiter.api.Test;
 
 /**
  * 线程池工具类
