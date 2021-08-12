@@ -2,12 +2,17 @@ package cn.tyrone.java.datastructure.stack;
 
 import java.util.Arrays;
 
+/**
+ *
+ * @param <T>
+ */
 public class SequenceStack<T> {
 
-    final int MAX_SIZE = 10;
+    final int MAX_SIZE = 5;
 
     private T[] stackArray;
 
+    // 指针
     private int top;
 
     public SequenceStack(){
@@ -93,7 +98,10 @@ public class SequenceStack<T> {
      * 依次访问栈中元素并输出
      */
     public void nextOrder(){
-        Arrays.stream(this.stackArray).forEach(t -> System.out.println(t));
+//        Arrays.stream(this.stackArray).forEach(t -> System.out.println(t));
+        for (int i = this.top; i >= 0; i--) {
+            System.out.println(this.stackArray[i]);
+        }
     }
 
     /**

@@ -44,6 +44,12 @@
                 <scope>test</scope>
             </dependency>
 
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>3.11</version>
+            </dependency>
+
             <!-- jol是分析JVM中对象的结构布局工 -->
             <dependency>
                 <groupId>org.openjdk.jol</groupId>
