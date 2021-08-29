@@ -29,7 +29,7 @@ public class SequenceLoopQueue<T> {
     }
 
     /**
-     * 在队列队尾添加一个元素
+     * 入队
      * @param obj
      */
     public void enqueue(T obj){
