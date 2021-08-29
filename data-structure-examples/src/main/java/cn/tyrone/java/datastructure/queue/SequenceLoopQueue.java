@@ -7,7 +7,7 @@ import cn.tyrone.java.datastructure.stack.SequenceStack;
  */
 public class SequenceLoopQueue<T> {
 
-    private final int MAX_SIZE = 10;
+    private final int MAX_SIZE = 2;
     private T[] queueArray;
     /**
      * 队头打针
@@ -33,25 +33,20 @@ public class SequenceLoopQueue<T> {
      * @param obj
      */
     public void enqueue(T obj){
+        // (rear + 1) % queueArray.length == front 判断队满的条件
         if ((rear + 1) % queueArray.length == front) {
+
+            // 如果队满，则声明原队列的2倍容量扩容
             T[] p = (T[]) new Object[queueArray.length * 2];
 
+            // 将队列中元素迁移至临时数组中
             if (rear == (queueArray.length - 1)) {
                 for (int i = 1; i <= rear; i++) {
                     p[i] = queueArray[i];
                 }
-            } else {
-                int i, j = 1;
-                for (i = front + 1; i < queueArray.length; i++, j++) {
-                    p[j] = queueArray[i];
-                }
-
-                for (i = 0; i <= rear; i++, j++) {
-                    p[j] = queueArray[i];
-                }
-                front = 0;
-                rear = queueArray.length - 1;
             }
+
+            // 将临时数组赋值给原始队列数组
             queueArray = p;
 
         }
@@ -116,8 +111,9 @@ public class SequenceLoopQueue<T> {
 
         for (i = 1; i <= size(); i++) {
             j = (j + 1) % queueArray.length;
-            System.out.println(queueArray[j]);
+            System.out.println("元素索引[" + j + "]:" + queueArray[j]);
         }
+        System.out.println("---------------------------");
 
     }
 
