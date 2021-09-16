@@ -1,4 +1,4 @@
-package cn.tyrone.java.datastructure.sort.bubble;
+package cn.tyrone.java.datastructure.sort;
 
 import java.util.Arrays;
 
@@ -7,12 +7,7 @@ import java.util.Arrays;
  */
 public class BubbleSort {
 
-    public static void main(String[] args) {
-        int[] arr = new int[]{5, 7, 3, 6, 10, 11};
-        System.out.println(arr.length);
-        System.out.println("排序前：" + Arrays.toString(arr));
-
-
+    public static void bubbleSoft(int[] arr){
         int length = arr.length - 1;
         // 登记比较过程中，最后一次交换的索引号
         int lastSwapIndex = 0;
@@ -43,9 +38,6 @@ public class BubbleSort {
             }
 
         }
-
-        System.out.println("排序后：" + Arrays.toString(arr));
-
     }
 
 }
