@@ -9,7 +9,7 @@ public class SingleLinkedList<T> {
      * 当前节点
      */
     private Node<T> node;
-
+    
     /**
      * 向链表尾部添加
      * @param data
