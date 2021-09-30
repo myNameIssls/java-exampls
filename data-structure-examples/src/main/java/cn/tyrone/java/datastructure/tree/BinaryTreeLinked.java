@@ -129,6 +129,49 @@ public class BinaryTreeLinked<T> {
     }
 
     /**
+     * 层级遍历
+     */
+    public Node<T>[] levelOrder(){
+
+        Node<T> node = this.node;
+
+        int count = count(node);
+
+        if (count == 0) {
+            return null;
+        }
+
+        // 节点队列
+        Node<T>[] nodeQueue = new Node[count];
+
+        // 队首指针
+        int front = -1;
+        // 队尾指针
+        int rear = 0;
+        nodeQueue[rear] = this.node;
+
+        while (front != rear) {
+
+            front++;
+            System.out.println(nodeQueue[front].data);
+
+            Node<T> left = nodeQueue[front].left;
+            if (left != null) {
+                rear++;
+                nodeQueue[rear] = left;
+            }
+
+            Node<T> right = nodeQueue[front].right;
+            if (right != null) {
+                rear++;
+                nodeQueue[rear] = right;
+            }
+
+        }
+        return nodeQueue;
+    }
+
+    /**
      * 后序遍历
      * @param node
      */
@@ -146,6 +189,45 @@ public class BinaryTreeLinked<T> {
 
         System.out.println(node.data);
 
+    }
+
+    /**
+     * 获取二叉树的高度
+     * @return
+     */
+    public int getHeight(Node<T> node){
+        int height = 0;
+
+        if (node == null) {
+            return height;
+        }
+
+        int leftHeight = getHeight(node.left);
+        int rightHeight = getHeight(node.right);
+
+        height = leftHeight > rightHeight ? leftHeight + 1 : rightHeight + 1;
+
+        return height;
+    }
+
+    /**
+     * 二叉树节点数量
+     * @param node
+     * @return
+     */
+    public int count(Node<T> node){
+        int count = 0;
+
+        if (node == null) {
+            return count;
+        }
+
+        int leftCount = count(node.left);
+        int rightCount = count(node.right);
+
+        count = leftCount + rightCount + 1;
+
+        return count;
     }
 
     /**
