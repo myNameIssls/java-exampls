@@ -3,11 +3,11 @@ package cn.tyrone.java.datastructure.tree;
 /**
  * 二叉树二叉链式存储结构
  */
-public class BinaryTreeLinked<T> {
+public class BinaryTreeLinked<E> {
 
-    private Node<T> node;
+    private Node<E> node;
 
-    public Node<T> getNode() {
+    public Node<E> getNode() {
         return node;
     }
 
@@ -22,7 +22,7 @@ public class BinaryTreeLinked<T> {
      * 创建以数据data为根节点的二叉树
      * @param data
      */
-    public BinaryTreeLinked(T data){
+    public BinaryTreeLinked(E data){
         this.node = new Node<>(data);
     }
 
@@ -33,13 +33,13 @@ public class BinaryTreeLinked<T> {
      * @param nodeLocation
      * @return
      */
-    public boolean insertChild(T data, Node<T> parent, NodeLocation nodeLocation) {
+    public boolean insertChild(E data, Node<E> parent, NodeLocation nodeLocation) {
 
         if (parent == null) {
             throw new RuntimeException("父节点不允许为空");
         }
 
-        Node<T> newNode = new Node<>(data);
+        Node<E> newNode = new Node<>(data);
 
         if (nodeLocation.equals(NodeLocation.LEFT)) {
             Node left = parent.left;
@@ -72,7 +72,7 @@ public class BinaryTreeLinked<T> {
      * 删除子节点
      * @return
      */
-    public boolean deleteChild(Node<T> parent, NodeLocation nodeLocation){
+    public boolean deleteChild(Node<E> parent, NodeLocation nodeLocation){
 
         if (parent == null) {
             throw new RuntimeException("父节点不允许为空");
@@ -93,14 +93,14 @@ public class BinaryTreeLinked<T> {
      * 先序遍历
      * 根节点--左节点--右节点
      */
-    public void preOrder(Node<T> node) {
+    public void preOrder(Node<E> node) {
 
         System.out.println(node.data);
-        Node<T> left = node.left;
+        Node<E> left = node.left;
         if (left != null) {
             preOrder(left);
         }
-        Node<T> right = node.right;
+        Node<E> right = node.right;
         if (right != null) {
             preOrder(right);
         }
@@ -112,16 +112,16 @@ public class BinaryTreeLinked<T> {
      * 左节点--根节点--右节点
      * @param node
      */
-    public void midOrder(Node<T> node){
+    public void midOrder(Node<E> node){
 
-        Node<T> left = node.left;
+        Node<E> left = node.left;
         if (left != null) {
             midOrder(left);
         }
 
         System.out.println(node.data);
 
-        Node<T> right = node.right;
+        Node<E> right = node.right;
         if (right != null) {
             midOrder(right);
         }
@@ -129,11 +129,32 @@ public class BinaryTreeLinked<T> {
     }
 
     /**
+     * 后序遍历
+     * 左结点 -- 右结点 -- 根结点
+     * @param node
+     */
+    public void afterOrder(Node<E> node){
+
+        Node<E> left = node.left;
+        if (left != null) {
+            afterOrder(left);
+        }
+
+        Node<E> right = node.right;
+        if (right != null) {
+            afterOrder(right);
+        }
+
+        System.out.println(node.data);
+
+    }
+
+    /**
      * 层级遍历
      */
-    public Node<T>[] levelOrder(){
+    public Node<E>[] levelOrder(){
 
-        Node<T> node = this.node;
+        Node<E> node = this.node;
 
         int count = count(node);
 
@@ -142,7 +163,7 @@ public class BinaryTreeLinked<T> {
         }
 
         // 节点队列
-        Node<T>[] nodeQueue = new Node[count];
+        Node<E>[] nodeQueue = new Node[count];
 
         // 队首指针
         int front = -1;
@@ -155,13 +176,13 @@ public class BinaryTreeLinked<T> {
             front++;
             System.out.println(nodeQueue[front].data);
 
-            Node<T> left = nodeQueue[front].left;
+            Node<E> left = nodeQueue[front].left;
             if (left != null) {
                 rear++;
                 nodeQueue[rear] = left;
             }
 
-            Node<T> right = nodeQueue[front].right;
+            Node<E> right = nodeQueue[front].right;
             if (right != null) {
                 rear++;
                 nodeQueue[rear] = right;
@@ -171,31 +192,13 @@ public class BinaryTreeLinked<T> {
         return nodeQueue;
     }
 
-    /**
-     * 后序遍历
-     * @param node
-     */
-    public void afterOrder(Node<T> node){
 
-        Node<T> left = node.left;
-        if (left != null) {
-            afterOrder(left);
-        }
-
-        Node<T> right = node.right;
-        if (right != null) {
-            afterOrder(right);
-        }
-
-        System.out.println(node.data);
-
-    }
 
     /**
      * 获取二叉树的高度
      * @return
      */
-    public int getHeight(Node<T> node){
+    public int getHeight(Node<E> node){
         int height = 0;
 
         if (node == null) {
@@ -215,7 +218,7 @@ public class BinaryTreeLinked<T> {
      * @param node
      * @return
      */
-    public int count(Node<T> node){
+    public int count(Node<E> node){
         int count = 0;
 
         if (node == null) {
