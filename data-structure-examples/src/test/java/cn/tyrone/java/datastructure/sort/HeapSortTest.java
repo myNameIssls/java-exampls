@@ -19,4 +19,11 @@ class HeapSortTest {
 
     }
 
+    @Test
+    void heapSortMax(){
+        int[] arrays = {4, 2, 7, 9, 5, 3};
+        HeapSort.heapSortMax(arrays);
+        System.out.println(Arrays.toString(arrays));
+    }
+
 }

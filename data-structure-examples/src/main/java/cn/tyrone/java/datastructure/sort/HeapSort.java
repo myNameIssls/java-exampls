@@ -8,7 +8,7 @@ import java.util.Arrays;
 public class HeapSort {
 
     /**
-     * 构建最大堆算法
+     * 构建大顶堆算法
      * @param arrays
      * @param length
      * @param index
@@ -43,7 +43,7 @@ public class HeapSort {
     }
 
     /**
-     * 构建最大堆
+     * 构建大顶堆
      * @param arrays
      */
     public static void buildMaxHeap(int[] arrays) {
@@ -60,5 +60,31 @@ public class HeapSort {
         }
 
     }
+
+    /**
+     * 大顶堆排序
+     * @param arrays
+     */
+    public static void heapSortMax(int[] arrays) {
+
+        // 开始位置从最后一个非叶子结点，即最后一个节点的父结点
+        int start = (arrays.length - 1) / 2;
+        int length = arrays.length;
+        for (int i = start; i >= 0; i--) {
+            buildMaxHeapAlgorithm(arrays, length, i);
+        }
+
+        for (int i = arrays.length - 1; i >= 0; i--) {
+            int temp = arrays[0];
+            arrays[0] = arrays[i];
+            arrays[i] = temp;
+
+            buildMaxHeapAlgorithm(arrays, i, 0);
+
+        }
+
+
+    }
+
 
 }
