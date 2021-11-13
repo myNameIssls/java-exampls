@@ -153,6 +153,14 @@ public class BinarySortTree {
     }
 
     /**
+     * 删除子结点
+     * @param value
+     */
+    public void delete(int value) {
+
+    }
+
+    /**
      * 中序遍历
      * 左节点--根节点--右节点
      * @param node
