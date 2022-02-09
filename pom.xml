@@ -88,5 +88,6 @@
         <module>design-pattern-examples</module>
         <module>java-new-features-example</module>
         <module>data-structure-examples</module>
+        <module>concurrent-program-examples</module>
     </modules>
 </project>
