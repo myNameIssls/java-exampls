@@ -1,6 +1,9 @@
 package cn.tyrone.java.example.java8.lambda;
 
-import java.awt.BorderLayout;
+import org.junit.jupiter.api.Test;
+
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Arrays;
@@ -8,11 +11,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-import javax.swing.JButton;
-import javax.swing.JFrame;
-
 //import org.junit.Test;
-import org.junit.jupiter.api.Test;
 
 /**
  * jdk 8 新特性：Lambda 表达式示例程序
@@ -81,7 +80,7 @@ public class LambdaDemo {
 		for (Person person : personList) {
 			person.printName();
 		}
-		
+
 	}
 	
 	/**
