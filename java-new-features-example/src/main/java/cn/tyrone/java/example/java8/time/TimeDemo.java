@@ -19,6 +19,8 @@ public class TimeDemo {
         LocalDateTime localDateTime = LocalDateTime.now();
         System.out.println("获取当前日期时间：" + localDateTime);
         System.out.println("---------------------------------");
+
+
         // 获取当前日期-年份
         int year = localDateTime.getYear(); // 年份
         System.out.println("获取当前日期-年份：" + year);
@@ -48,8 +50,9 @@ public class TimeDemo {
         // 获取当前日期是当年第几周
         int weekCount = localDate.get(weekFields.weekOfYear());
         System.out.println("获取当前日期是当年第几周：" + weekCount);
-
         System.out.println("---------------------------------");
+
+
         // 当前日期加1天,
         LocalDate plusDays = localDate.plusDays(1);
         System.out.println("当前日期：" + localDate + "\t" + "当前日期加1天：" + plusDays);
