@@ -89,5 +89,6 @@
         <module>java-new-features-example</module>
         <module>data-structure-examples</module>
         <module>concurrent-program-examples</module>
+        <module>apache-example</module>
     </modules>
 </project>
