@@ -1,11 +1,11 @@
 package cn.tyrone.apache.commons.lang3.entity;
 
+import cn.tyrone.apache.commons.lang3.extend.ToStringStyleExtend;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.apache.commons.lang3.builder.ToStringBuilder;
-import org.apache.commons.lang3.builder.ToStringStyle;
 
 import java.util.List;
 
@@ -30,6 +30,6 @@ public class User {
         // return new ToStringBuilder(this).append(name).toString();
 
         // 默认格式输出
-        return ToStringBuilder.reflectionToString(this, ToStringStyle.JSON_STYLE);
+        return ToStringBuilder.reflectionToString(this, ToStringStyleExtend.JSON_STYLE_EXTEND);
     }
 }
