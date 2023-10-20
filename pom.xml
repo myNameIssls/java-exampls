@@ -90,5 +90,6 @@
         <module>data-structure-examples</module>
         <module>concurrent-program-examples</module>
         <module>apache-example</module>
+        <module>java-example</module>
     </modules>
 </project>
