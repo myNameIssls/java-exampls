@@ -9,7 +9,9 @@ public class LocalDateTimeDemo {
     public static void main(String[] args) {
         LocalDateTime now = LocalDateTime.now();
 
-        String s = rfc3339(now);
+//        String s = rfc3339(now);
+
+        formatT();
 
     }
 
@@ -25,6 +27,20 @@ public class LocalDateTimeDemo {
 
 
         return format;
+
+    }
+
+    public static void formatT(){
+
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss");
+
+        LocalDateTime now = LocalDateTime.now();
+        String format = now.format(dateTimeFormatter);
+        System.out.println(format);
+
+        LocalDateTime parse = LocalDateTime.parse(format, dateTimeFormatter);
+        System.out.println(parse.toString());
+
 
     }
 
